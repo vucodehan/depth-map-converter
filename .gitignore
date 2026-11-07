@@ -1,0 +1,11 @@
+.venv/
+third_party/
+checkpoints/
+outputs/
+work/
+preferences.json
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.part
