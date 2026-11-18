@@ -2,13 +2,17 @@
 
 A local app that turns a video or a still into a depth map, then can stack clay shading, lines and a pose on top of it.
 
-![Four steps: input, one depth scale for the clip, a stack of clay lines and pose, then export.](docs/media/workflow.png)
+[![A 6 second clip converted by the app: a depth map with Canny edges and an OpenPose skeleton stacked on top, two people standing under a street lamp.](docs/media/depth-sample.gif)](docs/media/depth-sample.mp4)
+
+*Output from one clip: depth with Canny edges and a pose skeleton stacked on top, all from a single run. Near is white. [Play the full MP4.](docs/media/depth-sample.mp4)*
 
 ## Why it exists
 
 A depth map made one frame at a time flickers, because each frame picks its own gray scale. This app uses a video depth model, so the whole clip shares one scale. The file it writes is the map. It does not need a Stable Diffusion install.
 
 ## How it works
+
+![Four steps: input, one depth scale for the clip, a stack of clay lines and pose, then export.](docs/media/workflow.png)
 
 ```mermaid
 flowchart LR
